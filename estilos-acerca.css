@@ -161,6 +161,12 @@ a:focus {
     justify-self: center;
     border-left: 1px solid var(--texto);
 }
+.texto-p {
+    display: grid;
+    margin: 0 auto;
+    justify-self: center;
+}
+
 
 /* 
 ******************************************************************************
@@ -185,8 +191,13 @@ a:focus {
     }
     .card {
         height: 200px;
-        font-size: 11px;
-        
+        font-size: 12px;
+    }
+    .texto-p {
+        max-width: 100%;
+        width: 70%;
+        margin-left: 0;
+        justify-self: flex-start;
     }
     .card img {
         height: 60px;
@@ -200,7 +211,13 @@ a:focus {
     }
     .card {
         height: 350px;
-        font-size: 9px;
+        font-size: 12px;
+    }
+    .texto-p {
+        max-width: 100%;
+        width: 55%;
+        margin-left: 0;
+        justify-self: flex-start;
     }
     .card img {
         height: 60px;
@@ -210,11 +227,21 @@ a:focus {
 }
 @media (max-width: 320px) {
     .cuerpo {
-        height: 550px;
+        height: 800px;
     }
     .card {
-        height: 450px;
-        font-size: 9px;
+        height: 750px;
+        font-size: 12px;
+    }
+    .card h1 {
+        width: 9%;
+        font-size: 12px;
+    }
+    .texto-p {
+        max-width: 100%;
+        width: 7%;
+        margin-left: 0;
+        justify-self: flex-start;
     }
     .card img {
         height: 60px;

@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos CSS -->
     <link href="estilos-acerca.css" rel="stylesheet">
+    <link href="estilos-swiper.css" rel="stylesheet" >
+    <!-- Swiper JS-->
+    <link href="swiper.min.js" rel="stylesheet">
     <title>Acerca de mí</title>
 </head>
 <body>
@@ -13,11 +17,22 @@
         <header>
             
             <div class="cabecera">
-            
-                <img src="img/cabecera.jpg" alt=" " class="foto">
-                
-                
-            </div>
+             
+                     <!-- Swiper -->
+                     <div class="swiper-container">
+                         <div class="swiper-wrapper">
+                             <div class="swiper-slide"><img src="img/cabecera.jpg" alt=" " class="foto"></div>
+                             <div class="swiper-slide"><img src="img/cabecera2.jpg" alt=" " class="foto"></div>
+                             <div class="swiper-slide"><img src="img/cabecera3.jpg" alt=" " class="foto"></div>
+                         </div>
+                         <!-- Add Pagination -->
+                             <div class="swiper-pagination"></div>
+                         <!-- Add Arrows -->
+                             <div class="swiper-button-next"></div>
+                             <div class="swiper-button-prev"></div>
+                     </div> <!-- Cierra Swiper -->
+                 
+             </div> <!-- Cierra Cabecera -->
         
 
             <nav>
@@ -47,7 +62,7 @@
 
                     <div class="texto">
                         <h1> Acerca de mí </h1>
-                        <p>
+                        <p class="texto-p">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti dolore maiores unde culpa laborum quas et quam? Molestias reiciendis inventore, odio eveniet et, rem autem tempore eius, repellendus eum aut cumque expedita nesciunt debitis pariatur cum esse magnam optio! Quibusdam soluta aspernatur facilis vitae, ipsum fugit minima beatae quos.
                         </p>
                     </div>
@@ -60,7 +75,27 @@
         </footer> <!--Cierra footer-->
             
         </div> <!-- Cierra wrapper-->
-    </div>
+        
+        
+        <!-- Swiper JS -->
+        <script src="js/swiper.min.js"></script>
+            
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+              slidesPerView: 1,
+              spaceBetween: 30,
+              loop: true,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+        </script>
     
 </body>
 </html>

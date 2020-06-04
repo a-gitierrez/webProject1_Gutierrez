@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="estilos-trabajos.css" rel="stylesheet">
+     <!-- Estilos CSS -->
+     <link href="estilos-trabajos.css" rel="stylesheet">
+     <link href="estilos-swiper.css" rel="stylesheet" >
+     <!-- Swiper JS-->
+     <link href="swiper.min.js" rel="stylesheet">
+    
     <title>Trabajos</title>
 </head>
 <body>
@@ -14,10 +19,21 @@
             
             <div class="cabecera">
             
-                <img src="img/cabecera.jpg" alt=" " class="foto">
-                
-                
-            </div>
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/cabecera.jpg" alt=" " class="foto"></div>
+                        <div class="swiper-slide"><img src="img/cabecera2.jpg" alt=" " class="foto"></div>
+                        <div class="swiper-slide"><img src="img/cabecera3.jpg" alt=" " class="foto"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                </div> <!-- Cierra Swiper -->
+            
+            </div> <!-- Cierra Cabecera -->
         
 
             <nav>
@@ -83,7 +99,7 @@
 
                     </a>
                 </div>
-            </div>
+            </div><!--Cierra muestra -->
             
         </main>
         <!-- Cierra cuerpo-->
@@ -93,6 +109,27 @@
         </footer> <!--Cierra footer-->
             
         </div> <!-- Cierra wrapper-->
+
+
+         <!-- Swiper JS -->
+         <script src="js/swiper.min.js"></script>
+
+         <!-- Initialize Swiper -->
+         <script>
+             var swiper = new Swiper('.swiper-container', {
+               slidesPerView: 1,
+               spaceBetween: 30,
+               loop: true,
+               pagination: {
+                 el: '.swiper-pagination',
+                 clickable: true,
+               },
+               navigation: {
+                 nextEl: '.swiper-button-next',
+                 prevEl: '.swiper-button-prev',
+               },
+             });
+         </script>
     </div>
     
 </body>

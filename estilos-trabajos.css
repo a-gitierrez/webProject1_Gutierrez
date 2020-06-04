@@ -157,8 +157,8 @@ a:focus {
 }
 
 .muestra img {
-    height: 220px;
-    width: 220px;
+    height: 180px;
+    width: 180px;
     border-radius: 5px;
     filter: grayscale(1);
     transition: filter 1.25s;
@@ -168,7 +168,7 @@ a:focus {
     position: relative;
     background-color: var(--body);
     color: black;
-    width: 220px;
+    width: 180px;
     height: 30px;
     top: -125px;
     z-index:  1;
